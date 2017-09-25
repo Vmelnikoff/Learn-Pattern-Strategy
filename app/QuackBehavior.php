@@ -2,9 +2,7 @@
 
 namespace App;
 
-interface Quackable
+interface QuackBehavior
 {
-
     public function quack();
-
 }

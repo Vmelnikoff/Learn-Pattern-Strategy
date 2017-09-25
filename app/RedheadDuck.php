@@ -2,22 +2,18 @@
 
 namespace App;
 
-class RedheadDuck extends Duck implements Flyable
+class RedheadDuck extends Duck
 {
+
+    public function __construct()
+    {
+        $this->flyBehavior = new FlyWithWings();
+        $this->quackBehavior = new Quack();
+    }
 
     public function display()
     {
         return 'Рыжую утку';
-    }
-
-    public function fly()
-    {
-        return 'летает с крыльями';
-    }
-
-    public function quack()
-    {
-        return 'кря-кря';
     }
 
 }

@@ -2,9 +2,7 @@
 
 namespace App;
 
-interface Flyable
+interface FlyBehavior
 {
-
     public function fly();
-
 }

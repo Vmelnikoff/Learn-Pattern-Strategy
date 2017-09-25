@@ -2,22 +2,18 @@
 
 namespace App;
 
-class MallardDuck extends Duck implements Flyable
+class MallardDuck extends Duck
 {
+
+    public function __construct()
+    {
+        $this->flyBehavior = new FlyWithWings();
+        $this->quackBehavior = new Quack();
+    }
 
     public function display()
     {
         return 'Утку-крякву';
-    }
-
-    public function fly()
-    {
-        return 'летает с крыльями';
-    }
-
-    public function quack()
-    {
-        return 'кря-кря';
     }
 
 }
