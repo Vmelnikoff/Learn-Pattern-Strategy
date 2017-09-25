@@ -5,8 +5,16 @@ namespace App;
 abstract class Duck
 {
 
-    public $flyBehavior;
-    public $quackBehavior;
+    protected $flyBehavior;
+    protected $quackBehavior;
+
+    public function performFly() {
+        return $this->flyBehavior->fly();
+    }
+
+    public function performQuack() {
+        return $this->quackBehavior->quack();
+    }
 
     public function swim()
     {
