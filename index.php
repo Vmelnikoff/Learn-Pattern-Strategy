@@ -6,6 +6,7 @@ $mallardDuck = new \App\MallardDuck();
 $redheadDuck = new \App\RedheadDuck();
 $rubberDuck = new \App\RubberDuck();
 $decoyDuck = new \App\DecoyDuck();
+$modelDuck = new \App\ModelDuck();
 
 echo 'Мы видим: ' . $mallardDuck->display() . '<br>';
 echo 'Она умеет: ' . $mallardDuck->swim() . '<br>';
@@ -32,3 +33,14 @@ echo 'Мы видим: ' . $decoyDuck->display() . '<br>';
 echo 'Она умеет: ' . $decoyDuck->swim() . '<br>';
 echo 'Она кричит: ' . $decoyDuck->performQuack() . '<br>';
 echo 'Она: ' . $decoyDuck->performFly() . '<br>';
+
+echo '<br>';
+
+echo 'Мы видим: ' . $modelDuck->display() . '<br>';
+echo 'Она умеет: ' . $modelDuck->swim() . '<br>';
+echo 'Она кричит: ' . $modelDuck->performQuack() . '<br>';
+echo 'Она: ' . $modelDuck->performFly() . '<br>';
+
+$modelDuck->setFlyBehavior(new App\FlyRocketPowered());
+
+echo 'Она: ' . $modelDuck->performFly() . '<br>';
